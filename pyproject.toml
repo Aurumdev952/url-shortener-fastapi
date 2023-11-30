@@ -1,0 +1,24 @@
+[project]
+name = "Url_shortner"
+version = "1.0.1"
+description = "a simple url shortener"
+authors = [
+    {name = "Aurumdev952", email = "benjamugi20072@gmail.com"},
+]
+dependencies = [
+    "fastapi>=0.104.1",
+    "uvicorn[standard]>=0.24.0.post1",
+    "sqlalchemy>=2.0.23",
+    "psycopg2>=2.9.9",
+    "validators>=0.22.0",
+    "logging>=0.4.9.6",
+]
+requires-python = ">=3.11"
+readme = "README.md"
+license = {text = "MIT"}
+[tool.pdm.scripts]
+dev = "uvicorn src.main:app --reload"
+dev2 = "python src/main.py"
+start = "uvicorn src.main:app"
+
+
